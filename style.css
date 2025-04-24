@@ -71,25 +71,32 @@ nav li ul li {
 }
 
 /*CONTENIDO PRINCIPAL DE LA PAGINA WEB*/
-main.contenido{
+div .colocacion{
     display: flex;
-    padding: 1rem;
-    gap: 2rem; /*espacio entre la parte de la section y el aside*/
+    width: 100%;
+    border: 5px solid red;
 }
-main .contenido section{
-    width: 70%;
+
+div .contenedor1{
+    border: 5px solid salmon;
+    width: 125vh;
+
 }
-main .contenido aside {
-    width: 30%;
-    padding: 1rem;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+
+
+article {
+    border: 2px solid black;
+}
+article p{
+    width: 100%;
 }
 
 /*ASIDE*/
 aside {
     border: 1px solid red; /*solo aquí para ver el borde de 'aside' */
+    width: 40%;
+    height: auto;
+
 }
 
 aside h2 {
@@ -97,15 +104,15 @@ aside h2 {
     font-size: 1.2rem;
     margin-top: 1rem;
     display: flex;
-    align-items: center;
+    align-items:center;
     gap: 0.5rem;
 }
 
-aside img {
-    width: 1.5em;
+article img {
+    max-width: 100%;
     height: auto;
-    vertical-align: middle;
-}
+    display: block;
+  }
 
 aside p {
     text-align: justify;
