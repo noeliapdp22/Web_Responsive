@@ -6,6 +6,7 @@
 }
 
 .contenedor{
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
@@ -75,6 +76,7 @@ main.contenido{
     display: flex;
     padding: 1rem;
     gap: 2rem; /*espacio entre la parte de la section y el aside*/
+    flex:1; /*Hace que ocupe todo el esapcio disponible, de esta manera el footer siempre quedará abajo del todo*/
 }
 main .contenido section{
     width: 70%;
@@ -121,6 +123,104 @@ footer{
     padding: 1em;
 }
 
+/*QUIENES SOMOS*/
+.contenedor2{
+    display: flex;
+}
 
+.quienessomos{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    max-width: 60%; 
+}
+
+.quienessomos h2{
+    font-size: 4rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.quienessomos p{
+    font-size: 1rem;
+    margin: 2rem;
+    text-align: left;
+}
+
+.nosotros{
+    max-height: 50%;
+    width: 40%; 
+    display: flex;
+}
+
+#imagen_nosotros{
+    width: 100%;       
+    height: auto;      
+    display: block;   
+}
+
+/******************************************************************************/
 /*MEDIA QUERIES*/
+/* 1) base */
+@media (min-width:1300px){
 
+}
+
+/* 2) Tablet horizontal */
+@media (max-width:1299px) and (min-width:1024px) { 
+    .contenedor2 {
+        flex-direction: column; 
+        /*Estoy cambiando el eje principal a vertical: los hijos se apilan de arriba abajo.
+        Lo que hace que los div que tengo se alineen uno debajo de otro y no se solapen. Ya que por defecto tienen un eje horizontal*/
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .quienessomos,
+      .nosotros {
+        width: 100%;
+      }
+}
+
+/* 3) Tablet vertical */
+@media (max-width:1023px) and (min-width:768px) {
+    .contenedor2 {
+        flex-direction: column; 
+        /*Estoy cambiadno el eje principal a vertical: los hijos se apilan de arriba abajo.
+        Lo que hace que los div que tengo se alineen uno debajo de otro y no se solapen. Ya que por defecto tienen un eje horizontal*/
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .quienessomos,
+      .nosotros {
+        width: 100%;
+      }
+ }
+
+/* 4) Móvil horizontal */
+@media (max-width:767px) and (min-width:480px) {
+    .contenedor2 {
+        flex-direction: column; 
+        /*Estoy cambiadno el eje principal a vertical: los hijos se apilan de arriba abajo.
+        Lo que hace que los div que tengo se alineen uno debajo de otro y no se solapen. Ya que por defecto tienen un eje horizontal*/
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .quienessomos,
+      .nosotros {
+        width: 100%;
+      }
+}
+
+/* 5) Móvil vertical */
+@media (max-width:480px) {
+    .contenedor2 {
+        flex-direction: column; 
+        /*Estoy cambiadno el eje principal a vertical: los hijos se apilan de arriba abajo.
+        Lo que hace que los div que tengo se alineen uno debajo de otro y no se solapen. Ya que por defecto tienen un eje horizontal*/
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .quienessomos,
+      .nosotros {
+        width: 100%;
+      }
+}
