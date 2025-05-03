@@ -61,8 +61,9 @@ nav ul li a {
     background-color: #a9d9de;
     color: #1e5c66; 
     text-decoration: none;
-    padding: 1rem 1rem;
+    padding: 0.7rem 1rem;
     display: block;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav li {
@@ -82,15 +83,19 @@ nav li ul {
     border: 1px solid #ccc;
 }
 
-nav li:hover > ul{
+nav ul li a:hover{
     display: block;
-    width: 17rem;
     background-color: #1e5c66;
+    color: white;
 }
-
+nav li:hover > ul {
+  display: block;
+  min-width: 12rem; 
+}
 nav li ul li {
     position: relative;
 }
+
 
 /*CONTENIDO PRINCIPAL DE LA PAGINA WEB*/
 main.contenido{
@@ -271,6 +276,51 @@ footer {
 }
 
 /******************************************************************************/
+/* PÁGINA EN CONSTRUCCIÓN */
+
+.contenido-inprogress {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .img-inprogress {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .contenido-inprogress h1 {
+    font-size: 2.5rem;
+    color: #1e5c66;
+    font-family: 'Verdana', sans-serif;
+  }
+  
+  .contenido-inprogress p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .boton-volver {
+    background-color: #30a9b6;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .boton-volver:hover {
+    background-color: #1e5c66;
+  }
+  
+
+  /******************************************************************************/
 /*MEDIA QUERIES*/
 /* 1) base */
 @media (min-width:1300px){
