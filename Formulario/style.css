@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #84ffef;	
+    flex-direction: column;
+    font-size: 20px;
+    border-radius: 10%;
+    color: #1C1C1E	;
+}
+
+form h1 {
+    font-size: 20px;
+}
+fieldset {
+    margin: 0.5rem;
+}
+fieldset.parte1 {
+    background-color: #e3f8f3;
+    width: 80%;
+}
+fieldset.parte2{
+    background-color: #FFF8E1;    
+    width: 80%;
+}
+fieldset.parte3{
+    background-color: #F6E9E9;
+    width: 80%;
+}
+fieldset.parte4{
+    background-color: rgb(173, 253, 241);
+    width: 80%;
+}
+
+fieldset.parte5 {
+    background-color: #F0F7FF;
+    width: 80%;
+}
+fieldset.parte6{
+    background-color: rgb(255, 203, 140);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+legend {
+    display: flex;
+    text-align: start;
+    background-color: aliceblue;
+}
+select {
+    border-radius: 10%;
+    font-size: 20px;
+}
+
+div.contenedor_input {
+    display: flex;
+}
+
+div.contenedor_input > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0.1rem 0 0.3rem; 
+    width: 33%;
+    
+}
+
+
+div.contenedor_input label {
+    font-size: 20px;
+    text-align: start;
+}
+
+div.contenedor_input input {
+    padding: 0.4rem;
+    width:90% ;
+    font-size: 15px;
+}
+
+#Nombre {
+    width: 50%;
+}
+
+#Fecha_Nacimiento{
+    width: 40%;
+    font-size: 20px;
+}
+
+.Provincia {
+    width: 50%;
+}
+div.contenedor_input > div.domicilio {
+    width:66% ;
+}
+#Domicilio {
+    width: 80%;
+}
+
+div.lista1 {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 1rem;
+}
+
+div.lista1 > div {
+    padding: 0.1rem;
+    margin: 0.2rem;
+}
+.listaDentro {
+    margin-left: 2rem;
+    padding: 0.2rem;
+}
+form p {
+    text-align: start;
+    padding: 0.4rem;
+}
+
+div.documentos{
+    text-align: start;
+    margin: 1rem;
+}
+
+div.documentos > div  {
+    margin: 1rem;
+
+}
+
+div.servicios {
+    flex-direction: column;
+    display: flex;
+    margin: 1rem;
+    align-items: start;
+}
+
+div.servicios > label {
+    margin: 0.2rem;
+
+
+}
+textarea {
+    width: 10%;
+    height: auto;
+}
+.Confirmacion {
+    margin: 1rem;
+}
+
+.Solicitud {
+    margin: 1rem;
+}
+
+div.Confirmacion > p > input {
+    padding: 0.2rem;
+}
+
+.primary-btn{
+    font-size: 20px;
+    padding: 1rem 2rem;
+    margin: 1rem;
+}

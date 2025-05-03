@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="">
+        <h1>FORMULARIO DE PRESUPUESTO</h1>
+        <fieldset class="parte1">
+            <legend>Datos Personales</legend>
+            <div class="contenedor_input">
+                <div>
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" name="Nombre" id="Nombre">
+                </div>
+                <div>
+                    <label for="Apellidos">Apellidos</label>
+                    <input type="text" name="Apellidos" id="Apellidos">
+                </div>
+                <div>
+                    <label for="DNI">DNI/CIF</label>
+                    <input type="text" name="DNI" id="DNI">
+                </div>
+            </div>
+
+            <div class="contenedor_input">
+                <div>
+                    <label for="Lugar_nacimiento">Lugar nacimiento</label>
+                    <input type="text" name="Lugar_nacimiento" id="Lugar_nacimiento" placeholder="País: España">
+                </div>
+                <div>
+                    <label for="Provincia">Provincia</label>
+                    <select name="Provincia" class="Provincia">
+                        <option value="1">Madrid</option>
+                        <option value="2">Santiago</option>
+                        <option value="3">Avila</option>
+                        <option value="4">Segovia</option>
+                        <option value="5">Huesca</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="Fecha_Nacimiento">Fecha Nacimiento</label>
+                    <input type="date" name="Fecha_Nacimiento" id="Fecha_Nacimiento">
+                </div>
+            </div>
+
+            <div class="contenedor_input">
+                <div class="domicilio">
+                    <label for="Domicilio">Domicilio</label>
+                    <input type="text" name="Domicilio" id="Domicilio" placeholder="Calle,Plaza y Número">
+                </div>
+                <div>
+                    <label for="Codigo_postal">Codigo postal</label>
+                    <input type="text" name="Codigo_postal" id="Codigo_postal">
+                </div>
+            </div>
+
+            <div class="contenedor_input">
+                <div>
+                    <label for="Localidad">Localidad</label>
+                    <input type="text" name="Localidad" id="Localidad">
+                </div>
+                <div>
+                    <label for="Provincia">Provincia</label>
+                    <select name="Provincia" class="Provincia">
+                        <option value="1">Madrid</option>
+                        <option value="2">Santiago</option>
+                        <option value="3">Avila</option>
+                        <option value="4">Segovia</option>
+                        <option value="5">Huesca</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="Telefono">Telefono</label>
+                    <input type="tel" name="Telefono" id="Telefono">
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="parte2">
+            <legend>Servicios deseados</legend>
+            <div class="servicios">
+                <label><input type="checkbox"> Diseño desde cero</label>
+                <label><input type="checkbox"> Mantenimiento mensual</label>
+                <label><input type="checkbox"> Rediseño de página existente</label>
+                <label><input type="checkbox"> Optimización SEO</label>
+                <label><input type="checkbox"> Integración con redes sociales</label>
+                <label><input type="checkbox"> Otro: <input type="text" placeholder="Especificar"></label>
+            </div>
+          </fieldset>
+
+        <fieldset class="parte3">
+            <legend>Tipo de Web</legend>
+                        <div class="lista1">
+                            <div>
+                                <input type="radio" name="tipoWeb" value="LandingPage">
+                                <label for="LandingPage">LandingPage</label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" name="tipoWeb" value="PaginaEmpresa">
+                                <label for="PaginaEmpresa">Pagina de empresa o servicios</label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" name="tipoWeb" value="E-commerce">
+                                <label for="E-commerce">E-commerce</label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" name="tipoWeb" value="Portfolio">
+                                <label for="Portfolio">Portfolio</label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" name="tipoWeb" value="Otros">
+                                <label for="Otros">Otros
+                                    <input type="text" placeholder="Especifique tipoWeb">
+                                </label>
+                            </div>
+
+                            <p>¿Ya dispone de dominio?</p>
+                            <div>
+                                <label for="check0"><input type="checkbox">Sí</label> 
+                            </div>
+                            <div>
+                                <label for="check1"><input type="checkbox">No</label>
+                            </div>
+
+                            <p>¿Ya dispone de Hosting?</p>
+                            <div>
+                                <label for="check2"><input type="checkbox">Sí</label>
+                            </div>
+                            <div>
+                                <label for="check3"><input type="checkbox">No</label> 
+
+                            </div>
+                        </div>
+                        
+                </fieldset>
+
+                
+                <fieldset class="parte5">
+                    <legend>Documentación</legend>
+                    <div class="documentos">
+                        
+                        <div>
+                            <label for="DNI">Fotocopia DNI/CIF</label>
+                            <input type="file" name="DNI" accept=".pdf">
+                        </div>
+                        <div>
+                            <label for="Cuenta">Titular Cuenta Bancaria</label>
+                            <input type="file" name="DNI" accept=".pdf">
+                        </div>
+
+                        <div>
+                            <label for="DocAdicionales">Documentación Adicional</label>
+                            <input type="file" name="DNI" accept=".pdf" multiple>
+                        </div>
+                    </div>
+                    
+                </fieldset>
+                
+                <fieldset class="parte4">
+                    <legend>📝 Solicitud </legend>
+                    <div class="Solicitud">
+                        <p>
+                            El/la abajo firmante solicita un presupuesto para la creación de una página web según las características seleccionadas en este formulario.
+                        </p>
+                        <p>
+                            Declara que los datos proporcionados son veraces y acepta ser contactado por los medios facilitados con el fin de ampliar la información y recibir una propuesta personalizada.
+                        </p>
+
+                    </div>
+
+                </fieldset>
+                <fieldset class="parte6">
+                    
+                    <legend>Confirmación</legend> 
+                    <div class="Confirmacion">
+                        <p>De conformidad con lo establecido en el artículo 6.1.b del Reglamento (UE) 2016/679 
+                            del Parlamento Europeo y del Consejo, relativo a la protección de las personas físicas en lo 
+                            que respecta al tratamiento de datos personales, el/la solicitante autoriza el tratamiento de 
+                            los datos proporcionados para la elaboración del presupuesto y posterior contacto.</p>
+                            <p>Así mismo, declara que los datos facilitados en este formulario son verídicos y solicita de forma 
+                                expresa la elaboración de una propuesta de desarrollo web según los servicios seleccionados.
+                            </p>
+                            <p>Firmado:</p>
+                            <p><input type="text">,<input type="text"> de <input type="text"> de                     
+                                <select name="Year" class="Year">
+                                    <option value="1">2020</option>
+                                    <option value="2">2021</option>
+                                    <option value="3">2022</option>
+                                    <option value="4">2023</option>
+                                    <option value="5">2024</option>
+                                    <option value="6">2025</option>
+                                    <option value="7">2026</option>
+                                </select>
+                            </p>
+                                <label for="firma">Firma</label>
+                                <textarea name="firma" id="firma"></textarea>
+                                
+                    </div>
+                  </fieldset>
+                  
+                    <div class="buton">
+                        <input type="submit" value="Enviar" class="primary-btn">
+                        <input type="reset" value="Borrar" class="primary-btn">
+                    </div>
+            </form>
+            
+        </body>
+        </html>
