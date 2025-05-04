@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+header {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6f7f8;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 9rem;
+    height: 9rem;
+    position: relative;
+    margin: 0 0 0 4rem ;
+}
+/*MENÚ DESPLEGABLE EN EL NAV*/
+ul {
+    list-style: none;
+}
+nav {
+    margin-top: 0rem;
+    background-color: #a9d9de; 
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+nav ul li a {
+    background-color: #a9d9de;
+    color: #1e5c66; 
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav li {
+    float: none;
+    position: relative;
+    background-color: #f2f7f8; 
+}
+
+nav li ul {
+    display: none;
+    top: 100%;
+    position: absolute;
+    min-width: 10rem;
+    z-index: 100;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+nav ul li a:hover{
+    display: block;
+    background-color: #1e5c66;
+    color: white;
+}
+nav li:hover > ul {
+  display: block;
+  min-width: 12rem; 
+}
+nav li ul li {
+    position: relative;
+}
+
+.formulario {
+    margin: 5rem 0;
+}
+form {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e5c66;
+    flex-direction: column;
+    font-size: 20px;
+    border-radius: 10%;
+    color: #1C1C1E	;
+}
+
+form h1 {
+    font-size: 40px;
+    color: white;
+}
+fieldset {
+    margin: 0.5rem;
+}
+fieldset.parte1 {
+    background-color: #e3f8f3;
+    width: 80%;
+}
+fieldset.parte2{
+    background-color: #FFF8E1;    
+    width: 80%;
+}
+fieldset.parte3{
+    background-color: #F6E9E9;
+    width: 80%;
+}
+fieldset.parte4{
+    background-color: rgb(173, 253, 241);
+    width: 80%;
+}
+
+fieldset.parte5 {
+    background-color: #F0F7FF;
+    width: 80%;
+}
+fieldset.parte6{
+    background-color: rgb(255, 203, 140);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+legend {
+    display: flex;
+    text-align: start;
+    background-color: aliceblue;
+}
+select {
+    font-size: 20px;
+    padding: 0.3rem;
+}
+
+div.contenedor_input {
+    display: flex;
+}
+
+div.contenedor_input > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0.1rem 0 0.3rem; 
+    width: 33%;
+    
+}
+
+
+div.contenedor_input label {
+    font-size: 20px;
+    text-align: start;
+}
+
+div.contenedor_input input {
+    padding: 0.4rem;
+    width:90% ;
+    font-size: 15px;
+}
+
+#Nombre {
+    width: 50%;
+}
+
+#Fecha_Nacimiento{
+    width: 40%;
+    font-size: 20px;
+}
+
+.Provincia {
+    width: 50%;
+}
+div.contenedor_input > div.domicilio {
+    width:66% ;
+}
+#Domicilio {
+    width: 80%;
+}
+
+div.lista1 {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 1rem;
+}
+
+div.lista1 > div {
+    padding: 0.1rem;
+    margin: 0.2rem;
+}
+.listaDentro {
+    margin-left: 2rem;
+    padding: 0.2rem;
+}
+form p {
+    text-align: start;
+    padding: 0.4rem;
+}
+
+div.documentos{
+    text-align: start;
+    margin: 1rem;
+}
+
+div.documentos > div  {
+    margin: 1rem;
+
+}
+
+div.servicios {
+    flex-direction: column;
+    display: flex;
+    margin: 1rem;
+    align-items: start;
+}
+
+div.servicios > label {
+    margin: 0.2rem;
+
+
+}
+textarea {
+    width: 10%;
+    height: auto;
+}
+.Confirmacion {
+    margin: 1rem;
+}
+
+.Solicitud {
+    margin: 1rem;
+}
+
+div.Confirmacion > p > input {
+    padding: 0.2rem;
+}
+
+.primary-btn{
+    font-size: 20px;
+    padding: 1rem 2rem;
+    margin: 1rem;
+}
+
+/*FOOTER*/
+footer {
+    background-color: #1e5c66; 
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 1em;
+    margin-top: auto;
+}
