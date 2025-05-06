@@ -163,12 +163,14 @@ div.contenedor_input input {
     font-size: 15px;
 }
 
+
+
 #Nombre {
     width: 50%;
 }
 
 #Fecha_Nacimiento{
-    width: 40%;
+    width: 80%;
     font-size: 20px;
 }
 
@@ -223,7 +225,13 @@ div.servicios {
 div.servicios > label {
     margin: 0.2rem;
 
+}
+.servicios label input[type="text"] {
+    padding: 0.1rem;
+}
 
+.lista1 div label input[type="text"] {
+    padding: 0.1rem;
 }
 textarea {
     width: 10%;
@@ -256,3 +264,23 @@ footer {
     padding: 1em;
     margin-top: auto;
 }
+
+@media (max-width: 1020px) {
+
+    form {
+        width: 100%;
+        border-radius: 0%;    
+        margin: 0;
+    }
+
+    .Provincia {
+        width: 90%;
+        font-size: 15px;
+    }
+    .Fecha_Nacimiento {
+        width: 10%;
+        font-size: 15px;
+    }
+
+}
+
