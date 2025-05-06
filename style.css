@@ -1,595 +1,417 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /*border: 1px solid red;*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /*border: 1px solid red;*/
 }
 
-html, body {
-    height: 100%; 
-    /*Sin esto, el body solo mide lo que mida el contenido, y el footer no se bajará abajo de la página
+html,
+body {
+  height: 100%;
+  /*Sin esto, el body solo mide lo que mida el contenido, y el footer no se bajará abajo de la página
     De esta manera la altura del body es toda la altura de la ventana del navegador*/
 }
 body {
-    display: flex; /*Esto convierte el body en un contenedor flexible. Los elementos hijos se distribuyen de forma dinámica*/
-    /*Sin el display flex, lo hijos de ponen verticalmente desestructurando la página.*/
-    flex-direction: column; /*Eso es para que los elementos hijos se coloquen uno debajo del otro
+  display: flex; /*Esto convierte el body en un contenedor flexible. Los elementos hijos se distribuyen de forma dinámica*/
+  /*Sin el display flex, lo hijos de ponen verticalmente desestructurando la página.*/
+  flex-direction: column; /*Eso es para que los elementos hijos se coloquen uno debajo del otro
     Como el main, el header y el footer.*/
-    min-height: 100vh; /*Esto permite que el footer no se quede flotando en medio de la pantalla cuando hay poco contenido
+  min-height: 100vh; /*Esto permite que el footer no se quede flotando en medio de la pantalla cuando hay poco contenido
     porque ocupa como minimo el 100% de la altura visible de la plantalla*/
 }
 
-.contenedor{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
+.contenedor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 /*HEADER*/
 header {
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #e6f7f8;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e6f7f8;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
 .logo {
-    width: 9rem;
-    height: 9rem;
-    position: relative;
-    margin: 0 0 0 4rem ;
+  width: 9rem;
+  height: 9rem;
+  position: relative;
+  margin: 0 0 0 4rem;
 }
 /*MENÚ DESPLEGABLE EN EL NAV*/
 ul {
-    list-style: none;
+  list-style: none;
 }
 nav {
-    margin-top: 0rem;
-    background-color: #a9d9de; 
-    width: 100%;
-    position: relative;
-    z-index: 10;
+  margin-top: 0rem;
+  background-color: #a9d9de;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
-nav ul{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 nav ul li a {
-    background-color: #a9d9de;
-    color: #1e5c66; 
-    text-decoration: none;
-    padding: 0.7rem 1rem;
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
+  background-color: #a9d9de;
+  color: #1e5c66;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav li {
-    float: none;
-    position: relative;
-    background-color: #f2f7f8; 
+  float: none;
+  position: relative;
+  background-color: #f2f7f8;
 }
 
 nav li ul {
-    display: none;
-    top: 100%;
-    position: absolute;
-    min-width: 10rem;
-    z-index: 100;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
+  display: none;
+  top: 100%;
+  position: absolute;
+  min-width: 10rem;
+  z-index: 100;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
 }
 
-nav ul li a:hover{
-    display: block;
-    background-color: #1e5c66;
-    color: white;
+nav ul li a:hover {
+  display: block;
+  background-color: #1e5c66;
+  color: white;
 }
 nav li:hover > ul {
   display: block;
-  min-width: 12rem; 
+  min-width: 12rem;
 }
 nav li ul li {
-    position: relative;
+  position: relative;
 }
-
 
 /*CONTENIDO PRINCIPAL DE LA PAGINA WEB*/
-main.contenido{
-    display: flex;
-    padding: 1rem;
-    justify-content: center;
-    gap: 2rem; /*espacio entre la parte de la section y el aside*/
-    flex:1; /*Hace que ocupe todo el esapcio disponible, de esta manera el footer siempre quedará abajo del todo*/
+main.contenido {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  gap: 2rem; /*espacio entre la parte de la section y el aside*/
+  flex: 1; /*Hace que ocupe todo el esapcio disponible, de esta manera el footer siempre quedará abajo del todo*/
 }
-main .contenido section{
-    width: 70%;
+main .contenido section {
+  width: 70%;
 }
 main .contenido aside {
-    width: 30%;
-    padding: 1rem;
-    background-color: #f2f7f8; 
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  width: 30%;
+  padding: 1rem;
+  background-color: #f2f7f8;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-.intro{
-    width: 70%;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+.intro {
+  width: 70%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 .intro h1 {
-    font-size: 2.5rem;
-    color: #1e5c66;
-    text-align: center;
-  }
-  
-  .imagen-intro {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .intro p {
-    font-size: 1.1rem;
-    text-align: justify;
-    color: #333;
-  }
+  font-size: 2.5rem;
+  color: #1e5c66;
+  text-align: center;
+}
+
+.imagen-intro {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  text-align: justify;
+  color: #333;
+}
 
 /* ASIDE */
 aside {
-    width: 30%;
-    padding: 1rem;
-    background-color: #f2f7f8;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  aside h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #1e5c66;
-  }
-  
-  aside img {
-    width: 1.2rem;
-    height: auto;
-    vertical-align: middle;
-  }
-  
-  aside p {
-    text-align: justify;
-    font-size: 0.95rem;
-    color: #333;
-    margin-left: 1.8rem; /* Alinea el texto con el icono */
-  }
+  width: 30%;
+  padding: 1rem;
+  background-color: #f2f7f8;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+aside h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1e5c66;
+}
+
+aside img {
+  width: 1.2rem;
+  height: auto;
+  vertical-align: middle;
+}
+
+aside p {
+  text-align: justify;
+  font-size: 0.95rem;
+  color: #333;
+  margin-left: 1.8rem; /* Alinea el texto con el icono */
+}
 
 /*FOOTER*/
 footer {
-    background-color: #1e5c66; 
-    color: white;
-    text-align: center;
-    position: relative;
-    padding: 1em;
-    margin-top: auto;
+  background-color: #1e5c66;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding: 1em;
+  margin-top: auto;
 }
 
 /*QUIENES SOMOS*/
-.contenedor2{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
+.contenedor2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
 }
 
-.quienessomos{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: left;
-    max-width: 600px;
-    flex: 1;
+.quienessomos {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  max-width: 600px;
+  flex: 1;
 }
 
-.quienessomos h2{
-    font-size: 4rem;
-    margin-top: 1rem;
-    text-align: center;
+.quienessomos h2 {
+  font-size: 4rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
-.quienessomos p{
-    font-size: 1rem;
-    margin: 2rem;
-    text-align: left;
+.quienessomos p {
+  font-size: 1rem;
+  margin: 2rem;
+  text-align: left;
 }
 
-.nosotros{
-    flex: 1;
-    display: flex;
-    justify-content: center;
+.nosotros {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-#imagen_nosotros{      
-    width: 100%;
-    max-width: 700px;
-    height: auto;
+#imagen_nosotros {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
 }
 /*************************************************************/
 /*ÁREAS DE ACTUACIÓN*/
 
-.actuacion{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    min-height: 10vh;
+.actuacion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
 }
 
-.card{
-    position: relative;
-    width: 18em;
-    height: 21em;
-    margin: 20px;
-    z-index: 1;
+.card {
+  position: relative;
+  width: 18em;
+  height: 21em;
+  margin: 20px;
+  z-index: 1;
 }
-.card .face{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow:hidden;
-    transition: 0.5s;
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
 }
-.card .front{
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0px 5px 10px #000;
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0px 5px 10px #000;
 }
-.card .front img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.card .front h3{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    background: #000;
-    text-align: center;
+.card .front h3 {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: #000;
+  text-align: center;
 }
 .card .back {
-    transform: perspective(600px) rotateY(180deg);
-    background: #1e5c66;
-    padding: 15px;
-    color: #f3f3f3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    box-shadow: 0px 5px 10px #000;
+  transform: perspective(600px) rotateY(180deg);
+  background: #1e5c66;
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0px 5px 10px #000;
 }
 .card .back .link {
-    border-top: 1px solid #a9d9de;
-    height: 50px;
-    line-height: 50px;
+  border-top: 1px solid #a9d9de;
+  height: 50px;
+  line-height: 50px;
 }
 .card .back .link a {
-    color: #a9d9de;
+  color: #a9d9de;
 }
-.card .back h3{
-    font-size: 30px;
-    margin-top: 20px;
-    letter-spacing: 2px;
-    
-} 
-.card .back p{
-    letter-spacing: 1px;
-
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
 }
-.card:hover .front{
-    transform: perspective(600px)rotateY(180deg);
+.card .back p {
+  letter-spacing: 1px;
 }
-.card:hover .back{
-    transform: perspective(600px)rotateY(360deg);
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
 }
 
 /******************************************************************************/
 /* PÁGINA EN CONSTRUCCIÓN */
 
 .contenido-inprogress {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
-    text-align: center;
-    gap: 2rem;
-  }
-  
-  .img-inprogress {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-  }
-  
-  .contenido-inprogress h1 {
-    font-size: 2.5rem;
-    color: #1e5c66;
-    font-family: 'Verdana', sans-serif;
-  }
-  
-  .contenido-inprogress p {
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  .boton-volver {
-    background-color: #30a9b6;
-    color: white;
-    text-decoration: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .boton-volver:hover {
-    background-color: #1e5c66;
-  }
-  
-
-  .formulario {
-    margin: 5rem 0;
-}
-form {
-    width: 70%;
-    height: 80%;
-    margin: auto;
-    padding: 1rem;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: #1e5c66;
-    flex-direction: column;
-    font-size: 20px;
-    border-radius: 10%;
-    color: #1C1C1E	;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  gap: 2rem;
 }
 
-form h1 {
-    font-size: 20px;
-}
-fieldset {
-    margin: 0.5rem;
-}
-fieldset.parte1 {
-    background-color: #e3f8f3;
-    width: 80%;
-}
-fieldset.parte2{
-    background-color: #FFF8E1;    
-    width: 80%;
-}
-fieldset.parte3{
-    background-color: #F6E9E9;
-    width: 80%;
-}
-fieldset.parte4{
-    background-color: rgb(173, 253, 241);
-    width: 80%;
+.img-inprogress {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
 }
 
-fieldset.parte5 {
-    background-color: #F0F7FF;
-    width: 80%;
-}
-fieldset.parte6{
-    background-color: rgb(255, 203, 140);
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-}
-legend {
-    display: flex;
-    text-align: start;
-    background-color: aliceblue;
-}
-select {
-    font-size: 20px;
-    padding: 0.3rem;
+.contenido-inprogress h1 {
+  font-size: 2.5rem;
+  color: #1e5c66;
+  font-family: "Verdana", sans-serif;
 }
 
-div.contenedor_input {
-    display: flex;
+.contenido-inprogress p {
+  font-size: 1.2rem;
+  color: #333;
 }
 
-div.contenedor_input > div {
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem 0.1rem 0 0.3rem; 
-    width: 33%;
-    
+.boton-volver {
+  background-color: #30a9b6;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-
-div.contenedor_input label {
-    font-size: 20px;
-    text-align: start;
+.boton-volver:hover {
+  background-color: #1e5c66;
 }
 
-div.contenedor_input input {
-    padding: 0.4rem;
-    width:90% ;
-    font-size: 15px;
-}
-
-#Nombre {
-    width: 50%;
-}
-
-#Fecha_Nacimiento{
-    width: 40%;
-    font-size: 20px;
-}
-
-.Provincia {
-    width: 50%;
-}
-div.contenedor_input > div.domicilio {
-    width:66% ;
-}
-#Domicilio {
-    width: 80%;
-}
-
-div.lista1 {
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin: 1rem;
-}
-
-div.lista1 > div {
-    padding: 0.1rem;
-    margin: 0.2rem;
-}
-.listaDentro {
-    margin-left: 2rem;
-    padding: 0.2rem;
-}
-form p {
-    text-align: start;
-    padding: 0.4rem;
-}
-
-div.documentos{
-    text-align: start;
-    margin: 1rem;
-}
-
-div.documentos > div  {
-    margin: 1rem;
-
-}
-
-div.servicios {
-    flex-direction: column;
-    display: flex;
-    margin: 1rem;
-    align-items: start;
-}
-
-div.servicios > label {
-    margin: 0.2rem;
-
-
-}
-textarea {
-    width: 10%;
-    height: auto;
-}
-.Confirmacion {
-    margin: 1rem;
-}
-
-.Solicitud {
-    margin: 1rem;
-}
-
-div.Confirmacion > p > input {
-    padding: 0.2rem;
-}
-
-.primary-btn{
-    font-size: 20px;
-    padding: 1rem 2rem;
-    margin: 1rem;
-}
-
-
-
-  /******************************************************************************/
+/******************************************************************************/
 /*MEDIA QUERIES*/
 /* 1) base */
-@media (min-width:1300px){
-
+@media (min-width: 1300px) {
 }
 
 /* 2) Tablet horizontal */
-@media (max-width:1299px) and (min-width:1024px) { 
-    .contenedor2 {
-        flex-direction: column; 
-        /*Estoy cambiando el eje principal a vertical: los hijos se apilan de arriba abajo.
+@media (max-width: 1299px) and (min-width: 1024px) {
+  .contenedor2 {
+    flex-direction: column;
+    /*Estoy cambiando el eje principal a vertical: los hijos se apilan de arriba abajo.
         Lo que hace que los div que tengo se alineen uno debajo de otro y no se solapen. Ya que por defecto tienen un eje horizontal*/
-        align-items: center;
-        gap: 1.5rem;
-      }
-      .quienessomos,
-      .nosotros {
-        width: 100%;
-      }
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .quienessomos,
+  .nosotros {
+    width: 100%;
+  }
 }
 
 /* 3) Tablet vertical */
-@media (max-width:1023px) and (min-width:768px) {
-    .contenedor2 {
-        flex-direction: column; 
-        /*Estoy cambiadno el eje principal a vertical: los hijos se apilan de arriba abajo.
+@media (max-width: 1023px) and (min-width: 768px) {
+  .contenedor2 {
+    flex-direction: column;
+    /*Estoy cambiadno el eje principal a vertical: los hijos se apilan de arriba abajo.
         Lo que hace que los div que tengo se alineen uno debajo de otro y no se solapen. Ya que por defecto tienen un eje horizontal*/
-        align-items: center;
-        gap: 1.5rem;
-      }
-      .quienessomos,
-      .nosotros {
-        width: 100%;
-      }
- }
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .quienessomos,
+  .nosotros {
+    width: 100%;
+  }
+}
 
 /* 4) Móvil horizontal */
-@media (max-width:767px) and (min-width:480px) {
-    .contenedor2 {
-        flex-direction: column; 
-        /*Estoy cambiadno el eje principal a vertical: los hijos se apilan de arriba abajo.
+@media (max-width: 767px) and (min-width: 480px) {
+  .contenedor2 {
+    flex-direction: column;
+    /*Estoy cambiadno el eje principal a vertical: los hijos se apilan de arriba abajo.
         Lo que hace que los div que tengo se alineen uno debajo de otro y no se solapen. Ya que por defecto tienen un eje horizontal*/
-        align-items: center;
-        gap: 1.5rem;
-      }
-      .quienessomos,
-      .nosotros {
-        width: 100%;
-      }
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .quienessomos,
+  .nosotros {
+    width: 100%;
+  }
 }
 
 /* 5) Móvil vertical */
-@media (max-width:480px) {
-    .contenedor2 {
-        flex-direction: column; 
-        /*Estoy cambiadno el eje principal a vertical: los hijos se apilan de arriba abajo.
+@media (max-width: 480px) {
+  .contenedor2 {
+    flex-direction: column;
+    /*Estoy cambiadno el eje principal a vertical: los hijos se apilan de arriba abajo.
         Lo que hace que los div que tengo se alineen uno debajo de otro y no se solapen. Ya que por defecto tienen un eje horizontal*/
-        align-items: center;
-        gap: 1.5rem;
-      }
-      .quienessomos,
-      .nosotros {
-        width: 100%;
-      }
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .quienessomos,
+  .nosotros {
+    width: 100%;
+  }
 }
